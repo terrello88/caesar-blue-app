@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AuthForm from './AuthForm';
 import CustomerForm from './CustomerForm';
 import WaterTestForm from './WaterTestForm';
 import ServiceChecklist from './ServiceChecklist';
@@ -60,18 +61,8 @@ function App() {
   return (
     <div style={{ padding: '2rem', fontFamily: 'Arial', maxWidth: '600px', margin: 'auto' }}>
       <h1 style={{ textAlign: 'center', color: '#0077cc' }}>Caesar Blue Pools</h1>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-        <CustomerForm formData={formData} handleChange={handleProfileChange} />
-        <WaterTestForm poolType={formData.poolType} testData={testData} handleChange={handleTestChange} />
-        <ServiceChecklist checklist={checklist} handleChange={handleChecklistChange} />
-        <InvoiceForm gallons={parseInt(formData.gallons || '0')} />
-        <ChemicalCalculator gallons={parseInt(formData.gallons || '0')} testData={testData} />
-        <button type="submit" style={{ padding: '1rem', backgroundColor: '#0077cc', color: 'white', border: 'none', borderRadius: '5px' }}>
-          Save Visit Info
-        </button>
-      </form>
-    </div>
-  );
-}
 
-export default App;
+      {/* ✅ Login/Signup at the top */}
+      <AuthForm />
+
+      <form
