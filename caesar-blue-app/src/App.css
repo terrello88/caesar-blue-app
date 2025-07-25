@@ -1,12 +1,32 @@
-/* Optional basic reset and global styles */
+/* App.css - Basic global styles */
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f3f4f6; /* light gray */
-  color: #111;
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6; /* Tailwind's gray-100 */
+  color: #1f2937; /* Tailwind's gray-800 */
 }
 
 button {
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Optional: Style links consistently */
+a {
+  color: #3b82f6; /* Tailwind blue-500 */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Optional container styling */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
