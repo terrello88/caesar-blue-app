@@ -1,3 +1,5 @@
+// src/components/ConsentForm.tsx
+
 import React, { useState } from 'react';
 
 interface ConsentFormProps {
