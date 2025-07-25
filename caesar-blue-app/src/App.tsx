@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
-import './firebase';
-import AuthForm from './AuthForm';
+import './components/firebase';
 
-import CustomerForm from './CustomerForm';
-import ServiceChecklist from './service checklist';
-import WaterTestForm from './WaterTestForm';
-import ChemicalCalculator from './ChemicalCalculator';
-import InvoiceForm from './InvoiceForm';
+import AuthForm from './components/AuthForm';
+import CustomerForm from './components/CustomerForm';
+import ServiceChecklist from './components/ServiceChecklist';
+import WaterTestForm from './components/WaterTestForm';
+import ChemicalCalculator from './components/ChemicalCalculator';
+import InvoiceForm from './components/InvoiceForm';
 
 const App: React.FC = () => {
   const [user, setUser] = useState<any>(null);
